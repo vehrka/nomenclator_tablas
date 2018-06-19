@@ -1,49 +1,215 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+        <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/white.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <link rel="stylesheet" href="css/custom.css">
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <section>
+                        <h1>Nomenclator de tablas</h1>
+                        <small>Pedro «vehrka» Ferrer</small>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Nombres de las tablas</h2>
+                    </section>
+                    <section>
+                        <h3>Identificador del tipo de tabla:</h3>
+                        <blockquote>
+                            <div>
+                                <table border="1" class="docutils">
+                                <colgroup>
+                                <col width="25%" />
+                                <col width="75%" />
+                                </colgroup>
+                                <tbody valign="top">
+                                <tr class="row-odd "><td>t_</td>
+                                <td>tabla</td>
+                                </tr>
+                                <tr class="row-even fragment"><td>m_</td>
+                                <td>maestra</td>
+                                </tr>
+                                <tr class="row-even fragment"><td>a_</td>
+                                <td>auxiliar</td>
+                                </tr>
+                                <tr class="row-odd fragment"><td>g_</td>
+                                <td>geográfica</td>
+                                </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </blockquote>
+                    </section>
+                    <section>
+                        <h3>Se puede extender a otros elementos:</h3>
+                        <blockquote>
+                            <div>
+                                <table border="1" class="docutils">
+                                <colgroup>
+                                <col width="25%" />
+                                <col width="75%" />
+                                </colgroup>
+                                <tbody valign="top">
+                                <tr class="row-odd fragment"><td>r_</td>
+                                <td>relación (n-n)</td>
+                                </tr>
+                                <tr class="row-odd fragment"><td>v_</td>
+                                <td>vista</td>
+                                </tr>
+                                <tr class="row-even fragment"><td>i_</td>
+                                <td>índice</td>
+                                </tr>
+                                <tr class="row-even fragment"><td>pk_</td>
+                                    <td>nombre de </br>clave primaria</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </blockquote>
+                    </section>
+                    <section>
+                        <p><strong>Nombre de tabla:</strong></p>
+                        <p>Corto, conciso, definitorio y en plural</p>
+                        <p>Preferentemente en inglés</p>
+                        <div class="code highlight-default notranslate">
+                                <blockquote>t_teams</blockquote>
+                        </div>
+                    </section>
+                    <section>
+                        <ul class="simple">
+                        <li>Elegir nombres únicos en el tablespace</li>
+                        <li class="fragment">Resumir en 3 carácter es que sean únicos en el tablespace</li>
+                        </ul>
+                        <div class="code highlight-default notranslate fragment">
+                            <blockquote>tea</blockquote>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Nombres de los campos</h2>
+                    </section>
+                    <section>
+                        <ul class="simple">
+                        <li>Empieza con 3 <em>Carácteres</em> resumen de la tabla y “_”</li>
+                        <li class="fragment">siempre serán únicos en las consultas</li>
+                        </ul>
+                        <div class="fragment code highlight-default notranslate fragment">
+                            <blockquote>tea_</blockquote>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Resto del nombre</h3>
+                        <ul>
+                        <li>Clave primaria:</li>
+                        </ul>
+                        <blockquote><span class="n">p</span> <span class="o">+</span> <span class="n">nombre</span> <span class="n">tabla</span>
+                        </blockquote>
+                    </section>
+                    <section>
+                        <ul class="simple">
+                        <li>Clave foránea:</li>
+                        </ul>
+                        <blockquote><span class="n">f</span> <span class="o">+</span> <span class="n">nombre</span> <span class="n">tabla</span>
+                        </blockquote>
+                    </section>
+                    <section>
+                        <h3>Resto del nombre</h3>
+                        <p>Corto, conciso, definitorio</p>
+                        <p>Preferentemente en inglés</p>
+                        <blockquote>
+                            <span class="n">tea_ticker</span>
+                        </blockquote>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Ejemplos</h2>
+                    </section>
+                    <section>
+                                <table>
+                                <colgroup>
+                                <col width="50%" />
+                                <col width="50%" />
+                                </colgroup>
+                                <tbody valign="top">
+                                    <tr><td>equipos    </td><td>&#8594;</td><td>t_teams       </td></tr>
+                                    <tr><td>-----------</td><td>       </td><td>--------------</td></tr>
+                                    <tr><td>id         </td><td>&#8594;</td><td>tea_pteams    </td></tr>
+                                    <tr><td>cod_ine    </td><td>&#8594;</td><td>tea_fcitycodes</td></tr>
+                                    <tr><td>provincia  </td><td>&#8594;</td><td>tea_fregions  </td></tr>
+                                    <tr><td>competicion</td><td>&#8594;</td><td>tea_fcomps    </td></tr>
+                                    <tr><td>nombre     </td><td>&#8594;</td><td>tea_name      </td></tr>
+                                    <tr><td>id_equipo  </td><td>&#8594;</td><td>tea_ticker    </td></tr>
+                                </tbody>
+                                </table>
+                    </section>
+                    <section>
+                                <table>
+                                <colgroup>
+                                <col width="50%" />
+                                <col width="50%" />
+                                </colgroup>
+                                <tbody valign="top">
+                                    <tr><td>competiciones</td><td>&#8594;</td><td>m_comps   </td></tr>
+                                    <tr><td>-------------</td><td>       </td><td>----------</td></tr>
+                                    <tr><td>id           </td><td>&#8594;</td><td>com_pcomps</td></tr>
+                                    <tr><td>nombre       </td><td>&#8594;</td><td>com_name  </td></tr>
+                                </tbody>
+                                </table>
+                    </section>
+                    <section>
+                        <p>
+                            SELECT equipos.id, id_equipos, equipos.nombre, competiciones.nombre FROM equipos, competiciones WHERE competicion = competiciones.id;
+                        </p>
+                        <div class="fragment">
+                        <hr>
+                        <p>
+                            SELECT tea_pteams, tea_ticker, tea_name, com_name FROM t_teams, t_comps WHERE tea_fcomps = com_pcomps;
+                        </p>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
 </html>

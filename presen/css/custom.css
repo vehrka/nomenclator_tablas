@@ -1,0 +1,12 @@
+table {
+    border: 0px solid white;
+}
+
+td {
+    border: 0px solid white !important;
+}
+
+blockquote {
+    font-weight: bold !important;
+    font-size: 1.5EM !important;
+}
