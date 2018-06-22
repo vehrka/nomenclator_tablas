@@ -58,7 +58,7 @@ de esa forma siempre serán únicos en las consultas.
 
 .. code::
 
-   tea\_
+   tea_
 
 El resto del nombre se forma así
 
@@ -83,20 +83,24 @@ Rest del nombre nombres:
   + Corto, conciso, definitorio
   + Preferentemente en inglés
 
+.. code::
+
+   tea_ticket
+
 
 Ejemplo tabla
 -------------
 
 .. code::
 
-    t_teams
-    -------------------
-    tea_pteams
-    tea_fcities
-    tea_fregions
-    tea_fcomps
-    tea_name
-    tea_ticker
+    equipos     ->  t_teams
+    -----------     ------------
+    id          ->  tea_pteams
+    cod_ine     ->  tea_fcities
+    provincia   ->  tea_fregions
+    competicion ->  tea_fcomps
+    nombre      ->  tea_name
+    id_equipo   ->  tea_ticker
 
 
 Ejemplo maestra
@@ -104,18 +108,34 @@ Ejemplo maestra
 
 .. code::
 
-    m_comps
-    -------------------
-    com_pcomps
-    com_name
+    competiciones  ->  m_comps
+    -------------      ----------
+    id             ->  com_pcomps
+    nombre         ->  com_name
 
 Ejemplo SQL
 -----------
 
+.. code:: SQL
+
+    SELECT equipos.id, id_equipos, equipos.nombre, competiciones.nombre
+    FROM equios, competiciones
+    WHERE competicion = competiciones.id;
 
 .. code:: SQL
 
     SELECT tea_pteams, tea_ticker, tea_name, com_name
     FROM t_teams, t_comps
     WHERE tea_fcomps = com_pcomps;
+
+Ejemplo N-N
+-----------
+
+.. code::
+
+    r_teams_comps
+    ---------------
+    rtc_pteamscomps
+    rtc_fteams
+    rtc_fcomps
 
