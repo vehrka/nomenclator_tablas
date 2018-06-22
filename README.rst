@@ -3,8 +3,8 @@ Tables nomenclator
 ##################
 
 :author: vehrka
-:date: 2018-06-19
-:version: v1.0
+:date: 2018-06-22
+:version: v1.1
 
 Hints for creating names for tables and fields like a maniatic
 
@@ -15,4 +15,5 @@ and a presentations (using reveal) in presen/index.html
 Versions
 --------
 
+:v1.1: Minimal changes in the documentation and presentation
 :v1.0: Initial version
