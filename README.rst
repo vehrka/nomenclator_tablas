@@ -12,6 +12,12 @@ You can find the documentation in source/index.rst prepared to be used with Sphi
 
 and a presentations (using reveal) in presen/index.html
 
+Links
+=====
+
+* `Documentation <https://nomenclator-de-tablas.readthedocs.io/en/latest/>`_
+* `Slides <https://vehrka.github.io/nomenclator_tablas/>`_
+
 Versions
 --------
 
